@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;600&display=swap"
+        rel="stylesheet" />
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/Assets/Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Assets/Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Assets/Favicon/favicon-16x16.png">
+    <link rel="manifest" href="/Assets/Favicon/site.webmanifest">
+    <!-- style link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/0091808458.js" crossorigin="anonymous"></script>
+    <!-- title -->
+    <title>Password Generator</title>
+</head>
+
+<body style="background-color: grey;">
+    <div id="wrapper" class="container">
+        <div class="content-box">
+            <h1>PASSWORD GENERATOR</h1>
+            <div class="display-container">
+                <input type="text" placeholder="PASSWORD" readonly class="display" data-password-display>
+                <button data-copy>
+                    <Span data-copy-msg></Span>
+                    <i class="fa-solid fa-copy"></i>
+                </button>
+            </div>
+
+            <div class="input-container">
+                <div class="length-container">
+                    <p>Password Length</p>
+                    <p data-length-number>10</p>
+                </div>
+                <input type="range" min="1" max="20" step="1" class="slider" value=10 data-length-slider>
+                <div>
+                    <div class="check-mark">
+                        <input type="checkbox" id="upperCheck">
+                        <label for="upperCheck">Include Uppercase Letters</label>
+                    </div>
+                    <div class="check-mark">
+                        <input type="checkbox" id="lowerCheck">
+                        <label for="lowerCheck">Include Lowercase Letters</label>
+                    </div>
+                    <div class="check-mark">
+                        <input type="checkbox" id="numberCheck">
+                        <label for="numberCheck">Include Numbers</label>
+                    </div>
+                    <div class="check-mark">
+                        <input type="checkbox" id="symbolCheck">
+                        <label for="symbolCheck">Include Symbols</label>
+                    </div>
+
+                </div>
+                <div class="strength-container">
+                    <p>Strength</p>
+                    <div data-indicator></div>
+                </div>
+                <button class="generate-button">
+                    GENERATE PASSWORD
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
